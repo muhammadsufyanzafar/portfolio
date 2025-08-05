@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         * {
             font-family: 'Inter', sans-serif;
@@ -780,7 +782,11 @@
             });
         });
 
-        // Form validation and submission
+         // EmailJS Configuration
+        // Initialize EmailJS with your public key
+        emailjs.init("4NjxlBhI1X4KVuHDC"); // Replace with your actual public key
+        
+        // Form validation and submission with EmailJS
         const contactForm = document.getElementById('contact-form');
         
         contactForm.addEventListener('submit', function(e) {
@@ -825,21 +831,45 @@
             }
             
             if (isValid) {
-                // Simulate form submission
+                // Send email using EmailJS
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
                 submitBtn.disabled = true;
                 
-                setTimeout(() => {
-                    alert('Thank you for your message! I\'ll get back to you soon.');
+                // EmailJS send function
+                emailjs.send("service_re1s6fa", "template_w3gp4bf", {
+                    from_name: name.value,
+                    from_email: email.value,
+                    subject: subject.value,
+                    message: message.value,
+                    to_email: "sufyan.pk444@gmail.com" // Your email address
+                })
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    alert('✅ Message sent successfully! I\'ll get back to you soon.');
                     contactForm.reset();
+                    
+                    // Reset button
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
-                }, 2000);
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    alert('❌ Failed to send message. Please try again or contact me directly via email.');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
             }
         });
+
 
         // Social media links
         document.querySelectorAll('.social-icon').forEach(icon => {
