@@ -2,29 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Muhammad Sufyan Zafar - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sufyan Zafar - Software Engineer & Developer</title>
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    
+    <!-- Stylesheets and Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Mobile Optimization -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="theme-color" content="#667eea">
-
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' https: data:; font-src 'self' https: data:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    
     <!-- SEO and Social Meta Tags -->
-    <meta name="description" content="Muhammad Sufyan Zafar - Software Engineering Student, Developer & Designer. Passionate about AI, web development, and creating innovative digital solutions.">
-    <meta name="keywords" content="Muhammad Sufyan Zafar, Software Engineer, Web Developer, AI Developer, Portfolio, Punjab University Technology">
+    <meta name="description" content="Portfolio of Muhammad Sufyan Zafar, a passionate Software Engineering Student, Developer, and Designer specializing in AI, web development, and creating innovative digital solutions.">
+    <meta name="keywords" content="Muhammad Sufyan Zafar, Software Engineer, Web Developer, AI Developer, Portfolio, Punjab University Technology, Full-Stack Developer">
     <meta name="author" content="Muhammad Sufyan Zafar">
     <meta name="robots" content="index, follow">
     
@@ -32,165 +23,73 @@
     <meta property="og:title" content="Muhammad Sufyan Zafar - Portfolio">
     <meta property="og:description" content="Software Engineering Student, Developer & Designer passionate about creating innovative digital solutions.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta property="og:url" content="https://muhammadsufyanzafar.github.io/Portfolio/">
+    <meta property="og:image" content="https://placehold.co/1200x630/764ba2/ffffff?text=M.S.Z+Portfolio">
+    <meta property="og:image:alt" content="A preview of Muhammad Sufyan Zafar's portfolio website">
+
+
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#764ba2">
+
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- GitHub Pages Compatible Security -->
     <style>
+        /* Global Styles */
+        :root {
+            --primary-start: #667eea;
+            --primary-end: #764ba2;
+        }
         * {
             font-family: 'Inter', sans-serif;
             box-sizing: border-box;
         }
-        
         html {
             scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
         }
-        
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
+            background-color: #f9fafb; /* bg-gray-50 */
         }
         
+        /* Custom Gradient and Text Styles */
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
         }
-        
         .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        /* Mobile-First Responsive Design */
-        .container-mobile {
-            padding-left: 1rem;
-            padding-right: 1rem;
+        /* Navigation Link Underline Effect */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
         }
-        
-        @media (min-width: 640px) {
-            .container-mobile {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
+            transition: width 0.3s ease;
         }
-        
-        @media (min-width: 1024px) {
-            .container-mobile {
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
         }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .skill-bar {
-            transition: width 2s ease-in-out;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s ease;
-        }
-        
-        .slide-in-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .slide-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s ease;
-        }
-        
-        .slide-in-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .typing-animation {
-            border-right: 2px solid #667eea;
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { border-color: transparent; }
-            51%, 100% { border-color: #667eea; }
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            touch-action: manipulation;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            transform: translateY(-3px);
-        }
-        
-        @media (min-width: 768px) {
-            .back-to-top {
-                bottom: 30px;
-                right: 30px;
-                width: 50px;
-                height: 50px;
-            }
-            
-            .back-to-top:hover {
-                transform: translateY(-5px);
-            }
-        }
-        
-        /* Mobile Navigation Enhancements */
+
+        /* Mobile Menu Animation */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -198,274 +97,170 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 40;
+            z-index: 998;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
-        
         .mobile-menu-overlay.active {
             opacity: 1;
             visibility: visible;
         }
-        
         .mobile-nav {
             transform: translateX(-100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
         }
-        
         .mobile-nav.active {
             transform: translateX(0);
         }
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
         }
         
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
+        /* Typing Animation Cursor */
+        .typing-cursor {
+            border-right: 3px solid white;
+            animation: blink 0.7s infinite;
         }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
-        
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
             transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
         
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Custom Toast Notification for Form */
+        #form-toast {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
             color: white;
-            transition: all 0.3s ease;
-            text-decoration: none;
+            font-weight: 500;
+            z-index: 2000;
+            transition: bottom 0.5s ease-in-out;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
-        .social-icon:hover {
-            transform: translateY(-3px);
+        #form-toast.show {
+            bottom: 30px;
         }
-        
-        .form-input {
-            transition: all 0.3s ease;
+        #form-toast.success {
+            background-color: #28a745; /* Green */
         }
-        
-        .form-input:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.1);
+        #form-toast.error {
+            background-color: #dc3545; /* Red */
         }
-        
-        /* Mobile Touch Optimizations */
-        @media (max-width: 768px) {
-            .form-input:focus {
-                transform: none;
-                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-            }
-            
-            .card-hover:hover {
-                transform: none;
-            }
-            
-            .project-card:hover {
-                transform: none;
-            }
-            
-            .social-icon:hover {
-                transform: none;
-            }
+
+        /* Accessibility: Focus visible for keyboard navigation */
+        :focus-visible {
+            outline: 3px solid var(--primary-start);
+            outline-offset: 2px;
+            border-radius: 4px;
         }
-        
-        /* Touch-friendly button sizes */
-        .touch-target {
-            min-height: 44px;
-            min-width: 44px;
-            touch-action: manipulation;
-        }
-        
-        /* Prevent zoom on input focus for iOS */
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-            select, textarea, input[type="text"], input[type="password"], 
-            input[type="datetime"], input[type="datetime-local"], 
-            input[type="date"], input[type="month"], input[type="time"], 
-            input[type="week"], input[type="number"], input[type="email"], 
-            input[type="url"], input[type="search"], input[type="tel"], 
-            input[type="color"] {
-                font-size: 16px;
-            }
-        }
-        
-        /* Mobile Typography Adjustments */
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 2.5rem !important;
-                line-height: 1.2;
-            }
-            
-            h2 {
-                font-size: 2rem !important;
-                line-height: 1.3;
-            }
-            
-            h3 {
-                font-size: 1.5rem !important;
-                line-height: 1.4;
-            }
-            
-            .text-xl {
-                font-size: 1.125rem !important;
-            }
-            
-            .text-lg {
-                font-size: 1rem !important;
-            }
-        }
-        
-        /* Mobile Spacing Adjustments */
-        @media (max-width: 640px) {
-            .py-20 {
-                padding-top: 3rem !important;
-                padding-bottom: 3rem !important;
-            }
-            
-            .mb-16 {
-                margin-bottom: 2rem !important;
-            }
-            
-            .mb-8 {
-                margin-bottom: 1.5rem !important;
-            }
-            
-            .gap-8 {
-                gap: 1rem !important;
-            }
-            
-            .gap-12 {
-                gap: 2rem !important;
-            }
-        }
-        
-        /* Mobile Grid Adjustments */
-        @media (max-width: 640px) {
-            .grid-cols-2 {
-                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .space-x-4 > * + * {
-                margin-left: 0.5rem !important;
-            }
-            
-            .space-x-6 > * + * {
-                margin-left: 1rem !important;
-            }
+        .error-message {
+            display: none;
         }
     </style>
 </head>
 <body class="bg-gray-50">
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold gradient-text">Muhammad Sufyan Zafar</div>
-                <div class="hidden md:flex space-x-8">
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-[100] shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="text-2xl font-bold gradient-text">Muhammad Sufyan Zafar</a>
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About Me</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
                     <a href="#projects" class="nav-link text-gray-700 hover:text-purple-600">Projects</a>
                     <a href="#skills" class="nav-link text-gray-700 hover:text-purple-600">Skills</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 z-[1001] p-2" aria-label="Open main menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-        </div>
+        </nav>
+    </header>
 
-        <!-- Enhanced Mobile Menu -->
-        <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 max-w-sm bg-white shadow-2xl z-60 mobile-nav md:hidden">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <div class="text-lg font-bold gradient-text">Menu</div>
-                    <button id="mobile-menu-close" class="text-gray-500 hover:text-gray-700 touch-target p-2 -mr-2">
-                        <i class="fas fa-times text-xl"></i>
-                    </button>
+    <!-- Enhanced Mobile Menu -->
+    <div id="mobile-menu" class="mobile-nav fixed top-0 left-0 h-full w-72 bg-white shadow-2xl z-[1000] md:hidden" role="dialog" aria-modal="true">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <div class="text-lg font-bold gradient-text">Menu</div>
+                <button id="mobile-menu-close" class="text-gray-500 hover:text-gray-700 p-2" aria-label="Close main menu">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-2">
+                <a href="#home" class="mobile-nav-link block py-3 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200"><i class="fas fa-home mr-3 w-5 text-center"></i>Home</a>
+                <a href="#about" class="mobile-nav-link block py-3 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200"><i class="fas fa-user mr-3 w-5 text-center"></i>About</a>
+                <a href="#projects" class="mobile-nav-link block py-3 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200"><i class="fas fa-code mr-3 w-5 text-center"></i>Projects</a>
+                <a href="#skills" class="mobile-nav-link block py-3 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200"><i class="fas fa-cogs mr-3 w-5 text-center"></i>Skills</a>
+                <a href="#contact" class="mobile-nav-link block py-3 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200"><i class="fas fa-envelope mr-3 w-5 text-center"></i>Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Header/Hero Section -->
+        <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden pt-20">
+            <div class="absolute inset-0 bg-black/25"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 fade-in">Muhammad Sufyan Zafar</h1>
+                <p class="text-xl md:text-2xl mb-4 fade-in" style="transition-delay: 100ms;">Software Engineering Student</p>
+                <p class="text-lg md:text-xl mb-8 fade-in h-7" style="transition-delay: 200ms;"><span id="typing-text"></span><span class="typing-cursor"></span></p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 fade-in" style="transition-delay: 300ms;">
+                    <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 inline-block shadow-lg">
+                        View My Work
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-dNEhojKLXMzF2Gqsut3hECCgXNSbgds/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-block">
+                        Get Resume
+                    </a>
                 </div>
-                <div class="space-y-1">
-                    <a href="#home" class="mobile-nav-link block py-4 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200">
-                        <i class="fas fa-home mr-3 w-5"></i>Home
-                    </a>
-                    <a href="#about" class="mobile-nav-link block py-4 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200">
-                        <i class="fas fa-user mr-3 w-5"></i>About Me
-                    </a>
-                    <a href="#projects" class="mobile-nav-link block py-4 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200">
-                        <i class="fas fa-code mr-3 w-5"></i>Projects
-                    </a>
-                    <a href="#skills" class="mobile-nav-link block py-4 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200">
-                        <i class="fas fa-cogs mr-3 w-5"></i>Skills
-                    </a>
-                    <a href="#contact" class="mobile-nav-link block py-4 px-4 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200">
-                        <i class="fas fa-envelope mr-3 w-5"></i>Contact
-                    </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 lg:mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">About Me</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header/Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
             
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in">Muhammad Sufyan Zafar</h1>
-            <p class="text-xl md:text-2xl mb-2 fade-in">Software Engineering Student</p>
-            <p class="text-lg md:text-xl mb-8 typing-animation fade-in" id="typing-text">Passionate Developer & Designer</p>
-            <div class="space-x-4 fade-in">
-                <a href="#projects" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 inline-block">
-                    View My Work
-                </a>
-                <a href="https://drive.google.com/file/d/1-dNEhojKLXMzF2Gqsut3hECCgXNSbgds/view?usp=sharing" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 inline-block">
-                    Get Resume
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-white">
-        <div class="max-w-7xl mx-auto container-mobile">
-            <div class="text-center mb-8 sm:mb-12 lg:mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
-                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
-                <div class="slide-in-left order-2 lg:order-1">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
                     <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-6 sm:p-8 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
                         <div class="text-center">
                             <div class="text-6xl sm:text-7xl lg:text-8xl mb-3 sm:mb-4">👨‍💻</div>
@@ -473,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-in-right order-1 lg:order-2">
+                <div class="fade-in" style="transition-delay: 150ms;">
                     <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">My Journey</h3>
                     <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                         I'm Muhammad Sufyan Zafar, a passionate software engineering student currently studying at 
@@ -500,37 +295,30 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto container-mobile">
-            <div class="text-center mb-8 sm:mb-12 lg:mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">My Projects</h2>
-                <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-4 sm:mb-6"></div>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-                    Here are some of the projects I've worked on, showcasing my skills in development and design.
-                </p>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-                <!-- Project 1 -->
-                <div class="project-card fade-in">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white text-6xl">
-                        🛒
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Shopping Deals Website</h3>
-                        <p class="text-gray-600 mb-4">
-                            Affiliate website built in 9th grade that earned a check from Amazon Associates. 
-                            Features deal aggregation and user-friendly interface.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Blogger</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Affiliate</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">E-commerce</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://onlineshoppingdealofficial.blogspot.com/" target="_blank" rel="noopener">
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 lg:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 lg:mb-16 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">My Projects</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-4"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Here are some projects I've worked on, showcasing my skills in development and design.
+                    </p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">🛒</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Shopping Deals Website</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">An early affiliate marketing website that earned from Amazon Associates, showcasing deal aggregation.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Blogger</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Affiliate</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">E-commerce</span>
+                            </div>
+                            <div class="mt-auto flex space-x-3"><a href="https://onlineshoppingdealofficial.blogspot.com/" target="_blank" rel="noopener">
                             <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
                                 <i class="fas fa-external-link-alt mr-2"></i>Live Demo
                             </button>
@@ -540,27 +328,22 @@
                                 <i class="fas fa-info-circle mr-2"></i>Details
                             </button>
                             </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                 <!-- Project 2 -->
-                <div class="project-card fade-in">
-                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center text-white text-6xl">
-                        🍽️
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Bite Whispers</h3>
-                        <p class="text-gray-600 mb-4">
-                            A clean and responsive WordPress blog sharing recipes, food tips, and culinary content. Showcases my skills in WordPress design and SEO optimization.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Wordpress</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Web Development</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">SEO</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://bitewhisper.lovestoblog.com/" target="_blank" rel="noopener">
+                    <!-- Project 2 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">🍽️</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Bite Whispers</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">A responsive WordPress blog for recipes and culinary content, optimized for SEO.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Wordpress</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Web Development</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">SEO</span>
+                            </div>
+                            <div class="mt-auto flex space-x-3">
+                                <a href="https://bitewhisper.lovestoblog.com/" target="_blank" rel="noopener">
                             <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
                                 <i class="fas fa-external-link-alt mr-2"></i>Live Demo
                             </button>
@@ -570,28 +353,22 @@
                                 <i class="fas fa-info-circle mr-2"></i>Details
                             </button>
                             </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                  <!-- Project 3 -->
-                <div class="project-card fade-in">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl">
-                        🤖
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">iChatAI App</h3>
-                        <p class="text-gray-600 mb-4">
-                            AI chatting application developed using OpenAI and Gemini APIs. Features intelligent 
-                            conversations and modern UI design.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">OpenAI</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Gemini</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://drive.google.com/file/d/10HA8N9mV-rq4Dk1izQgX6FQzbtvI8oEJ/view?usp=sharing" target="_blank" rel="noopener">
+                    <!-- Project 3 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">🤖</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">iChatAI App</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">AI chatbot using OpenAI and Gemini APIs, featuring intelligent conversations and a modern UI.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">OpenAI</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Gemini</span>
+                            </div>
+                            <div class="mt-auto flex space-x-3">
+                                <a href="https://drive.google.com/file/d/10HA8N9mV-rq4Dk1izQgX6FQzbtvI8oEJ/view?usp=sharing" target="_blank" rel="noopener">
                             <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
                                 <i class="fas fa-download mr-2"></i>Download   
                             </button>
@@ -601,28 +378,22 @@
                                 <i class="fab fa-github mr-2"></i>Code
                             </button>
                             </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card fade-in">
-                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center text-white text-6xl">
-                        🎲
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ludo Game 2022</h3>
-                        <p class="text-gray-600 mb-4">
-                            Mobile game published on Huawei AppGallery and Palmstore. Features multiplayer 
-                            gameplay and engaging user experience.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Android</span>
+                    <!-- Project 4 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">🎲</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ludo Game 2022</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Mobile game published on Huawei AppGallery and Palmstore, with multiplayer gameplay.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Android</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Game Dev</span>
                             <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Java</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://appgallery.huawei.com/#/app/C107066351" target="_blank" rel="noopener">
+                            </div>
+                            <div class="mt-auto flex space-x-3">
+                                <a href="https://appgallery.huawei.com/#/app/C107066351" target="_blank" rel="noopener">
                             <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
                                 <i class="fas fa-download mr-2"></i>Download   
                             </button>
@@ -632,27 +403,22 @@
                                 <i class="fab fa-github mr-2"></i>Code
                             </button>
                             </a> 
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card fade-in">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-6xl">
-                        ⬜
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Quzardry</h3>
-                        <p class="text-gray-600 mb-4">
-                            A user-friendly flashcard app for quick and easy learning. Built to support memorization through a clean, minimal design.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Android</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Study App</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Java</span>
-                        </div>
-                        <div class="flex space-x-3">
-                             <a href="https://drive.google.com/file/d/1I87B3pGCesxwpCyygLujjSjRTgv_St0L/view?usp=sharing" target="_blank" rel="noopener">
+                    <!-- Project 5 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">⬜</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Quzardry</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">A user-friendly flashcard app for quick and easy learning with a clean, minimal design.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Android</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Study App</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Java</span>
+                            </div>
+                            <div class="mt-auto flex space-x-3">
+                                <a href="https://drive.google.com/file/d/1I87B3pGCesxwpCyygLujjSjRTgv_St0L/view?usp=sharing" target="_blank" rel="noopener">
                             <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
                                 <i class="fas fa-download mr-2"></i>Download   
                             </button>
@@ -661,16 +427,15 @@
                             <button class="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
                                 <i class="fab fa-github mr-2"></i>Code
                             </button>
-                            </a> 
+                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
+        <!-- Skills Section -->
     <section id="skills" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
@@ -680,126 +445,64 @@
                     A comprehensive overview of my technical and soft skills developed through years of learning and practice.
                 </p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Technical Skills -->
-                <div class="slide-in-left">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
-                        <i class="fas fa-code text-purple-600 mr-3"></i>
-                        Technical Skills
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">HTML & CSS</span>
-                                <span class="text-purple-600 font-semibold">90%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">JavaScript</span>
-                                <span class="text-purple-600 font-semibold">68%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 68%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">Java</span>
-                                <span class="text-purple-600 font-semibold">65%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">WordPress</span>
-                                <span class="text-purple-600 font-semibold">75%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">Android Development</span>
-                                <span class="text-purple-600 font-semibold">68%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 68%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium text-gray-700">AI Tools Integration</span>
-                                <span class="text-purple-600 font-semibold">80%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
-                <!-- Soft Skills -->
-                <div class="slide-in-right">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
-                        <i class="fas fa-users text-purple-600 mr-3"></i>
-                        Soft Skills
-                    </h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl card-hover">
-                            <div class="text-4xl mb-4">🧠</div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Problem Solving</h4>
-                            <p class="text-gray-600 text-sm">Analytical thinking and creative solutions</p>
-                        </div>
-                        
-                        <div class="text-center p-6 bg-gradient-to-br from-green-50 to-teal-50 rounded-xl card-hover">
-                            <div class="text-4xl mb-4">🤝</div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Team Collaboration</h4>
-                            <p class="text-gray-600 text-sm">Effective teamwork and coordination</p>
-                        </div>
-                        
-                        <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl card-hover">
-                            <div class="text-4xl mb-4">💬</div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Communication</h4>
-                            <p class="text-gray-600 text-sm">Clear and effective communication</p>
-                        </div>
-                        
-                        <div class="text-center p-6 bg-gradient-to-br from-pink-50 to-red-50 rounded-xl card-hover">
-                            <div class="text-4xl mb-4">💡</div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Creative Thinking</h4>
-                            <p class="text-gray-600 text-sm">Innovative and out-of-the-box ideas</p>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Technical Skills -->
+                    <div class="fade-in">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-code text-purple-600 mr-3"></i>Technical Skills</h3>
+                        <div class="space-y-5">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">HTML & CSS</span><span class="text-purple-600 font-semibold">90%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">JavaScript</span><span class="text-purple-600 font-semibold">68%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="68%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Java</span><span class="text-purple-600 font-semibold">65%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="65%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">WordPress</span><span class="text-purple-600 font-semibold">75%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Android Development</span><span class="text-purple-600 font-semibold">68%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="68%"></div></div>
+                            </div>
+                             <div class="skill-item">
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">AI Tools Integration</span><span class="text-purple-600 font-semibold">80%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="80%"></div></div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="mt-8 p-6 bg-gray-50 rounded-xl">
-                        <h4 class="font-semibold text-gray-800 mb-4">Additional Strengths</h4>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-white rounded-full text-gray-700 shadow-sm">Leadership</span>
-                            <span class="px-4 py-2 bg-white rounded-full text-gray-700 shadow-sm">Time Management</span>
-                            <span class="px-4 py-2 bg-white rounded-full text-gray-700 shadow-sm">Adaptability</span>
-                            <span class="px-4 py-2 bg-white rounded-full text-gray-700 shadow-sm">Critical Thinking</span>
-                            <span class="px-4 py-2 bg-white rounded-full text-gray-700 shadow-sm">Attention to Detail</span>
+                    <!-- Soft Skills -->
+                    <div class="fade-in" style="transition-delay: 150ms;">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-users text-purple-600 mr-3"></i>Soft Skills</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-purple-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">🧠</div><h4 class="font-semibold text-gray-800">Problem Solving</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-green-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">🤝</div><h4 class="font-semibold text-gray-800">Collaboration</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">💬</div><h4 class="font-semibold text-gray-800">Communication</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-pink-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">💡</div><h4 class="font-semibold text-gray-800">Creative Thinking</h4></div>
+                        </div>
+                         <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">Additional Strengths</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Leadership</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Time Management</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Adaptability</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Critical Thinking</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h2>
@@ -808,10 +511,10 @@
                     Ready to work together? Let's discuss your project and bring your ideas to life.
                 </p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Info -->
-                <div class="slide-in-left">
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                <div class="fade-in">
                     <h3 class="text-2xl font-bold text-gray-800 mb-8">Let's Connect</h3>
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
@@ -819,8 +522,7 @@
                                 <i class="fas fa-envelope text-xl"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-800">Email</p>
-                                <p class="text-gray-600">sufyan.pk444@gmail.com</p>
+                                <div class="flex items-start space-x-4"><div><p class="font-semibold text-gray-800">Email</p><a href="mailto:sufyan.pk444@gmail.com" class="text-gray-600 hover:text-purple-600">sufyan.pk444@gmail.com</a></div></div>
                             </div>
                         </div>
                         
@@ -829,8 +531,7 @@
                                 <i class="fas fa-phone text-xl"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-800">Phone</p>
-                                <p class="text-gray-600">+92 344 5054799</p>
+                                <div class="flex items-start space-x-4"></i><div><p class="font-semibold text-gray-800">Phone</p><a href="tel:+923445054799" class="text-gray-600 hover:text-purple-600">+92 344 5054799</a></div></div>
                             </div>
                         </div>
                         
@@ -839,95 +540,54 @@
                                 <i class="fas fa-map-marker-alt text-xl"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-800">Location</p>
-                                <p class="text-gray-600">Mandi Bahauddin, Punjab, Pakistan</p>
+                                <div class="flex items-start space-x-4"><div><p class="font-semibold text-gray-800">Location</p><p class="text-gray-600">Mandi Bahauddin, Punjab, Pakistan</p></div></div>
                             </div>
+                        </div>
+                    </div>
+                        <h4 class="font-semibold text-gray-800 mt-8 mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/muhammadsufyan.zafar.733" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/muhammadsufyanzafar/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/muhammadsufyanzafar" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-colors" aria-label="X"><i class="fab fa-x"></i></a>
+                            <a href="https://www.linkedin.com/in/muhammad-sufyan-zafar-pk/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/muhammadsufyanzafar" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-colors" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     
-                    <div class="mt-8">
-                        <h4 class="font-semibold text-gray-800 mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/muhammad-sufyan-zafar-pk/?lipi=urn%3Ali%3Apage%3Aprofile_common_profile_index%3Bff588c38-a1e8-4bc9-b587-30e64bfadddb" class="social-icon bg-blue-600 hover:bg-blue-700">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/muhammadsufyanzafar" class="social-icon bg-gray-800 hover:bg-gray-900">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.facebook.com/muhammadsufyan.zafar.733" class="social-icon bg-blue-400 hover:bg-blue-500">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/muhammadsufyanzafar/" class="social-icon bg-red-600 hover:bg-red-700">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
+                    <!-- Contact Form -->
+                    <div class="fade-in" style="transition-delay: 150ms;">
+                        <form id="contact-form" class="bg-white rounded-lg p-8 shadow-md" novalidate>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none" placeholder="Your Full Name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none" placeholder="your.email@example.com">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none resize-none" placeholder="Tell me about your project..."></textarea>
+                            
+                                <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                <label class="block text-gray-700 font-semibold mb-2">Security Question: What is 3 + 8? *</label>
+				                    <input type="number" id="captcha" name="captcha" required 
+                                   	class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none" 
+                                    placeholder="Enter the answer">
+                                <span class="error-message text-red-500 text-sm hidden">Please answer the security question correctly</span>
+                                </div>
+                            <button type="submit" id="submit-btn"
+                                class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="slide-in-right">
-                    <form id="contact-form" class="bg-white rounded-2xl p-8 shadow-lg">
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Name *</label>
-                                <input type="text" id="name" required 
-                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none" 
-                                       placeholder="Your Full Name">
-                                <span class="error-message text-red-500 text-sm hidden">Please enter your name</span>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Email *</label>
-                                <input type="email" id="email" required 
-                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none" 
-                                       placeholder="your@email.com">
-                                <span class="error-message text-red-500 text-sm hidden">Please enter a valid email</span>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Subject *</label>
-                            <input type="text" id="subject" required 
-                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none" 
-                                   placeholder="Project Discussion">
-                            <span class="error-message text-red-500 text-sm hidden">Please enter a subject</span>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Message *</label>
-                            <textarea id="message" rows="5" required 
-                                      class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none resize-none" 
-                                      placeholder="Tell me about your project..."></textarea>
-                            <span class="error-message text-red-500 text-sm hidden">Please enter your message</span>
-                        </div>
-                        
-                        <!-- Honeypot Field (Hidden from users, visible to bots) -->
-                        <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;">
-                            <label for="website">Website (leave blank):</label>
-                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                        </div>
-                        
-                        <!-- Rate Limiting Message -->
-                        <div id="rate-limit-message" class="hidden mb-4 p-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded-lg">
-                            <i class="fas fa-clock mr-2"></i>Please wait before sending another message.
-                        </div>
-                        
-                        <!-- GitHub Pages Security Challenge -->
-                        <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <label class="block text-gray-700 font-semibold mb-2">Security Question: What is 5 + 3? *</label>
-                            <input type="number" id="security-answer" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none" 
-                                   placeholder="Enter the answer">
-                            <span class="error-message text-red-500 text-sm hidden">Please answer the security question correctly</span>
-                        </div>
-                        
-                        <button type="submit" id="submit-btn"
-                                class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                            <i class="fas fa-paper-plane mr-2"></i>Send Message
-                        </button>
-                    </form>
-                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
@@ -942,17 +602,6 @@
                     <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
                     <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
                 </div>
-                <div class="flex justify-center space-x-4 mb-8">
-                    <a href="https://www.linkedin.com/in/muhammad-sufyan-zafar-pk/?lipi=urn%3Ali%3Apage%3Aprofile_common_profile_index%3Bff588c38-a1e8-4bc9-b587-30e64bfadddb" class="social-icon bg-blue-600 hover:bg-blue-700">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/muhammadsufyanzafar" class="social-icon bg-gray-700 hover:bg-gray-600">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.facebook.com/muhammadsufyan.zafar.733" class="social-icon bg-blue-400 hover:bg-blue-500">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
                 <div class="border-t border-gray-700 pt-8">
                     <p class="text-gray-400">&copy; 2025 Muhammad Sufyan Zafar. All rights reserved.</p>
                 </div>
@@ -961,59 +610,49 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <div class="back-to-top" id="back-to-top">
+    <a href="#home" id="back-to-top" class="back-to-top w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
-    </div>
+    </a>
+    
+    <!-- Toast Notification Container -->
+    <div id="form-toast"></div>
 
     <script>
-        // Enhanced Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Mobile Menu Logic ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const menuIcon = document.getElementById('menu-icon');
-        
-        function openMobileMenu() {
-            mobileMenu.classList.add('active');
-            mobileMenuOverlay.classList.add('active');
-            menuIcon.classList.replace('fa-bars', 'fa-times');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            menuIcon.classList.replace('fa-times', 'fa-bars');
-            document.body.style.overflow = '';
-        }
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('active')) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
-            }
-        });
-        
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
-        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-        
-        // Close mobile menu when clicking nav links
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        const toggleMenu = (isOpen) => {
+            const isExpanded = isOpen ? 'true' : 'false';
+            mobileMenu.classList.toggle('active', isOpen);
+            mobileMenuOverlay.classList.toggle('active', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            menuIcon.classList.toggle('fa-bars', !isOpen);
+            menuIcon.classList.toggle('fa-times', isOpen);
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+        };
+
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('active')));
+        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+        mobileMenuOverlay.addEventListener('click', () => toggleMenu(false));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
         });
 
-        // Enhanced smooth scrolling for navigation links
+        // --- Smooth Scrolling with Header Offset ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
                 if (target) {
-                    // Close mobile menu if open
-                    closeMobileMenu();
-                    
-                    // Smooth scroll with offset for fixed header
-                    const headerOffset = 80;
+                    e.preventDefault();
+                    const headerOffset = 80; // Height of the fixed header
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     
@@ -1021,336 +660,133 @@
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
+                     // Update URL hash without jumping
+                    if(history.pushState) {
+                        history.pushState(null, null, href);
+                    } else {
+                        location.hash = href;
+                    }
                 }
             });
         });
 
-        // Typing animation
+        // --- Active Navigation Link on Scroll ---
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a.nav-link');
+
+        const activateNavLink = () => {
+            let index = sections.length;
+            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+            
+            navLinks.forEach((link) => link.classList.remove('active'));
+            const activeLink = document.querySelector(`nav a.nav-link[href="#${sections[index].id}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        };
+        window.addEventListener('scroll', activateNavLink);
+        activateNavLink(); // Set active link on page load
+
+        // --- Typing Animation ---
         const typingText = document.getElementById('typing-text');
-        const texts = ['Passionate Developer & Designer', 'AI Enthusiast', 'Problem Solver', 'Creative Thinker'];
+        const texts = ['Passionate Developer & Designer', 'AI Enthusiast', 'Creative Problem Solver'];
         let textIndex = 0;
         let charIndex = 0;
-        let isDeleting = false;
 
         function typeWriter() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentText.substring(0, charIndex + 1);
+            if (charIndex < texts[textIndex].length) {
+                typingText.textContent += texts[textIndex].charAt(charIndex);
                 charIndex++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(eraseText, 2000);
             }
-
-            if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            setTimeout(typeWriter, isDeleting ? 50 : 100);
         }
 
+        function eraseText() {
+            if (charIndex > 0) {
+                typingText.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, 50);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, 500);
+            }
+        }
         typeWriter();
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+        // --- Intersection Observer for Animations ---
+        const observer = new IntersectionObserver((entries, observerInstance) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Animate skill bars
+                    if (entry.target.classList.contains('skill-bar')) {
+                        entry.target.style.width = entry.target.dataset.width;
+                    }
+                    observerInstance.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+        document.querySelectorAll('.fade-in, .skill-bar').forEach(el => {
             observer.observe(el);
         });
 
-        // Back to top button
+        // --- Back to Top Button Visibility ---
         const backToTop = document.getElementById('back-to-top');
-        
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            backToTop.classList.toggle('visible', window.pageYOffset > 300);
         });
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Active navigation link
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-         // GitHub Pages Security Configuration
-        let lastSubmissionTime = 0;
-        const RATE_LIMIT_DELAY = 30000; // 30 seconds between submissions
-        const MAX_MESSAGE_LENGTH = 2000;
-        const MAX_FIELD_LENGTH = 100;
-        let formInteractionCount = 0;
-        let formStartTime = 0;
-        
-        // Advanced bot detection for GitHub Pages
-        function initializeFormSecurity() {
-            formStartTime = Date.now();
-            
-            // Track genuine user interactions
-            ['name', 'email', 'subject', 'message'].forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                field.addEventListener('input', () => {
-                    formInteractionCount++;
-                });
-                field.addEventListener('focus', () => {
-                    formInteractionCount++;
-                });
-            });
-        }
-        
-        // Initialize security when page loads
-        document.addEventListener('DOMContentLoaded', initializeFormSecurity);
-        
-        // EmailJS Configuration
-        // Initialize EmailJS with your public key
-        emailjs.init("4NjxlBhI1X4KVuHDC"); // Replace with your actual public key
-        
-        // Security Functions
-        function sanitizeInput(input) {
-            return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-                       .replace(/javascript:/gi, '')
-                       .replace(/on\w+\s*=/gi, '')
-                       .trim();
-        }
-        
-        function isSpamContent(text) {
-            const spamKeywords = ['viagra', 'casino', 'lottery', 'winner', 'congratulations', 'click here', 'free money', 'make money fast'];
-            const lowerText = text.toLowerCase();
-            return spamKeywords.some(keyword => lowerText.includes(keyword));
-        }
-        
-        function validateHuman(formData) {
-            // Check honeypot field
-            if (formData.get('website') && formData.get('website').trim() !== '') {
-                console.log('Bot detected: Honeypot field filled');
-                return false;
-            }
-            
-            // Check form completion time (too fast = bot)
-            const formCompletionTime = Date.now() - formStartTime;
-            if (formCompletionTime < 5000) { // Less than 5 seconds
-                console.log('Bot detected: Form completed too quickly');
-                return false;
-            }
-            
-            // Check user interaction count (no interactions = bot)
-            if (formInteractionCount < 3) {
-                console.log('Bot detected: Insufficient user interactions');
-                return false;
-            }
-            
-            // Check for suspicious patterns
-            const name = formData.get('name') || '';
-            const email = formData.get('email') || '';
-            const message = formData.get('message') || '';
-            
-            // Check for excessive links
-            const linkCount = (message.match(/https?:\/\//g) || []).length;
-            if (linkCount > 2) {
-                console.log('Suspicious: Too many links');
-                return false;
-            }
-            
-            // Check for spam content
-            if (isSpamContent(name + ' ' + email + ' ' + message)) {
-                console.log('Spam content detected');
-                return false;
-            }
-            
-            // Check for repeated characters (common bot behavior)
-            if (/(.)\1{10,}/.test(name + email + message)) {
-                console.log('Bot detected: Excessive repeated characters');
-                return false;
-            }
-            
-            return true;
-        }
-        
-        function checkRateLimit() {
-            const now = Date.now();
-            if (now - lastSubmissionTime < RATE_LIMIT_DELAY) {
-                const remainingTime = Math.ceil((RATE_LIMIT_DELAY - (now - lastSubmissionTime)) / 1000);
-                document.getElementById('rate-limit-message').textContent = `Please wait ${remainingTime} seconds before sending another message.`;
-                document.getElementById('rate-limit-message').classList.remove('hidden');
-                return false;
-            }
-            document.getElementById('rate-limit-message').classList.add('hidden');
-            return true;
-        }
-        
-        // Form validation and submission with security
+        // --- Contact Form Logic ---
         const contactForm = document.getElementById('contact-form');
-        
+        const submitBtn = document.getElementById('submit-btn');
+        const formToast = document.getElementById('form-toast');
+        const captchaInput = document.getElementById('captcha');
+        const captchaError = captchaInput.nextElementSibling;
+
+        const showToast = (message, isSuccess = true) => {
+            formToast.textContent = message;
+            formToast.className = isSuccess ? 'success' : 'error';
+            formToast.classList.add('show');
+            setTimeout(() => {
+                formToast.classList.remove('show');
+            }, 4000);
+        };
+
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Rate limiting check
-            if (!checkRateLimit()) {
+
+            // Validate CAPTCHA
+            if (parseInt(captchaInput.value) !== 11) {
+                captchaError.style.display = 'block';
                 return;
+            } else {
+                captchaError.style.display = 'none';
             }
             
-            // Get form fields
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const subject = document.getElementById('subject');
-            const message = document.getElementById('message');
-            
-            // Reset previous errors
-            document.querySelectorAll('.error-message').forEach(error => {
-                error.classList.add('hidden');
-            });
-            
-            let isValid = true;
-            
-            // Enhanced validation with security checks
-            const nameValue = sanitizeInput(name.value);
-            const emailValue = sanitizeInput(email.value);
-            const subjectValue = sanitizeInput(subject.value);
-            const messageValue = sanitizeInput(message.value);
-            
-            // Length validation
-            if (nameValue.length > MAX_FIELD_LENGTH) {
-                alert('Name is too long. Please keep it under 100 characters.');
-                isValid = false;
-            }
-            
-            if (subjectValue.length > MAX_FIELD_LENGTH) {
-                alert('Subject is too long. Please keep it under 100 characters.');
-                isValid = false;
-            }
-            
-            if (messageValue.length > MAX_MESSAGE_LENGTH) {
-                alert('Message is too long. Please keep it under 2000 characters.');
-                isValid = false;
-            }
-            
-            // Basic validation
-            if (!nameValue) {
-                name.nextElementSibling.classList.remove('hidden');
-                isValid = false;
-            }
-            
-            // Enhanced email validation
-            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-            if (!emailValue || !emailRegex.test(emailValue)) {
-                email.nextElementSibling.classList.remove('hidden');
-                isValid = false;
-            }
-            
-            if (!subjectValue) {
-                subject.nextElementSibling.classList.remove('hidden');
-                isValid = false;
-            }
-            
-            if (!messageValue) {
-                message.nextElementSibling.classList.remove('hidden');
-                isValid = false;
-            }
-            
-            // Create FormData for validation
-            const formData = new FormData(contactForm);
-            formData.set('name', nameValue);
-            formData.set('email', emailValue);
-            formData.set('subject', subjectValue);
-            formData.set('message', messageValue);
-            
-            // Human validation
-            if (!validateHuman(formData)) {
-                alert('Security check failed. Please try again or contact me directly.');
-                return;
-            }
-            
-            // Security question validation
-            const securityAnswer = document.getElementById('security-answer');
-            const securityValue = parseInt(securityAnswer.value);
-            if (securityValue !== 8) {
-                securityAnswer.nextElementSibling.classList.remove('hidden');
-                alert('Please answer the security question correctly.');
-                return;
-            }
-            
-            if (isValid) {
-                // Send email using EmailJS
-                const submitBtn = document.getElementById('submit-btn');
-                const originalText = submitBtn.innerHTML;
-                
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-                submitBtn.disabled = true;
-                
-                // EmailJS send function with sanitized data
-                emailjs.send("service_re1s6fa", "service_re1s6fa", {
-                    from_name: nameValue,
-                    from_email: emailValue,
-                    subject: subjectValue,
-                    message: messageValue,
-                    to_email: "sufyan.pk444@gmail.com", // Your email address
-                    security_verified: "Human verified via math question"
-                })
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    
-                    // Update last submission time
-                    lastSubmissionTime = Date.now();
-                    
-                    // Show success message
-                    alert('✅ Message sent successfully! I\'ll get back to you soon.');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            // Initialize EmailJS with your public key
+            emailjs.init("4NjxlBhI1X4KVuHDC"); // Replace with your Public Key from EmailJS
+
+            emailjs.sendForm('service_re1s6fa', 'service_re1s6fa', this) // Replace with your Service ID and Template ID
+                .then(() => {
+                    showToast('✅ Message sent successfully! I\'ll get back to you soon.');
                     contactForm.reset();
-                    
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    
-                }, function(error) {
+                }, (error) => {
+                    showToast('❌ Failed to send message. Please try again.', false);
                     console.log('FAILED...', error);
-                    
-                    // Show error message
-                    alert('❌ Failed to send message. Please try again or contact me directly via email.');
-                    
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnText;
                     submitBtn.disabled = false;
                 });
-            }
         });
+    });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96acc521d40ca07f',t:'MTc1NDQ2NDgwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
