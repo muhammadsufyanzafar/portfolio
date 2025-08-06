@@ -38,6 +38,11 @@ Welcome to my portfolio website! Here, you’ll find a showcase of my skills, pr
 - **Home** – Hero section with introduction and call-to-action
 - **About Me** – Personal journey, interests, and experience
 - **Projects** – Includes:
+  - [iChatAI App](https://github.com/muhammadsufyanzafar/iChatAI---Open-Source-AI-Chatbot-using-Gemini-API)
+  - [Ludo Game 2022](https://github.com/muhammadsufyanzafar/ludo-game)
+  - [Quzardry – Flashcard App](https://github.com/muhammadsufyanzafar/quzardry)
+  - [Bite Whispers – Food Blog](https://bitewhisper.lovestoblog.com/)
+  - [Online Shopping Deals](https://onlineshoppingdealofficial.blogspot.com/)
 - **Skills** – Technical and soft skills with visual representation
 - **Contact** – Contact form with captcha, and social media links
 
