@@ -30,6 +30,7 @@ Welcome to my portfolio website! Here, you’ll find a showcase of my skills, pr
 - Contact form with validation and EmailJS integration
 - Animated "Back to Top" button and dynamic navigation highlighting
 - Mobile-friendly layout and dynamic mobile menu
+- Connecte with Google Analytics
 
 ---
 
