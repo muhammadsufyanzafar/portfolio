@@ -13,10 +13,13 @@
 Welcome to my portfolio website! Here, you’ll find a showcase of my skills, projects, experience, and education, along with ways to get in touch. This site is built using HTML, Tailwind CSS, and JavaScript, delivering a clean, responsive, and modern web experience. Feel free to explore my work, learn more about my journey as a Software Engineering student, and connect with me directly.
 
 ---
+## Demo
+
+![Portfolio Demo](https://i.postimg.cc/wMRjhmvx/Portfolio-Screenshot.jpg)
 
 ## 🌐 Live Site
-
-🔗 [View Portfolio Live](https://muhammadsufyanzafar.github.io/Portfolio/)
+Check out the live preview of the portfolio website here:
+🔗 [**View Portfolio Live**](https://muhammadsufyanzafar.github.io/Portfolio)
 
 ---
 
@@ -30,6 +33,7 @@ Welcome to my portfolio website! Here, you’ll find a showcase of my skills, pr
 - Contact form with validation and EmailJS integration
 - Animated "Back to Top" button and dynamic navigation highlighting
 - Mobile-friendly layout and dynamic mobile menu
+- Connecte with Google Analytics
 
 ---
 
