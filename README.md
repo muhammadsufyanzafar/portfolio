@@ -33,7 +33,7 @@ Check out the live preview of the portfolio website here:
 - Contact form with validation and EmailJS integration
 - Animated "Back to Top" button and dynamic navigation highlighting
 - Mobile-friendly layout and dynamic mobile menu
-- Connecte with Google Analytics
+- Connected with Google Analytics
 
 ---
 
