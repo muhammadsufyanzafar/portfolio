@@ -207,7 +207,13 @@
     <header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-[100] shadow-sm">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="#home" class="text-2xl font-bold gradient-text">Muhammad Sufyan Zafar</a>
+                <!-- Mobile menu button moved to left -->
+                <div class="flex items-center space-x-3">
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 z-[1001] p-2" aria-label="Open main menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                    <a href="#home" class="text-2xl font-bold gradient-text">Muhammad Sufyan Zafar</a>
+                </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
                     <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
@@ -215,9 +221,6 @@
                     <a href="#skills" class="nav-link text-gray-700 hover:text-purple-600">Skills</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 z-[1001] p-2" aria-label="Open main menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
             </div>
         </nav>
     </header>
@@ -270,7 +273,7 @@
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="fade-in">
-                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-6 sm:p-8 h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-6 sm:p-8 h-64 sm:h-80 lg:h-96 flex items-center justify-center shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                         <div class="text-center">
                             <div class="text-6xl sm:text-7xl lg:text-8xl mb-3 sm:mb-4">👨‍💻</div>
                             <p class="text-gray-600 font-medium text-sm sm:text-base">Coding Since Early Age</p>
@@ -290,11 +293,11 @@
                         create innovative solutions that make a positive impact on people's lives.
                     </p>
                     <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                        <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <div class="text-2xl sm:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">5+</div>
                             <p class="text-gray-600 text-sm sm:text-base">Years Coding</p>
                         </div>
-                        <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <div class="text-2xl sm:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">10+</div>
                             <p class="text-gray-600 text-sm sm:text-base">Projects Done</p>
                         </div>
@@ -440,6 +443,29 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-blue-500 flex items-center justify-center text-white text-6xl" aria-hidden="true">🏃‍♂️</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Escape Rush</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">An action-packed endless runner game built in Android Studio using Java, featuring exciting levels and smooth gameplay.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Android</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Game Dev</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Java</span>
+                            </div>
+                            <div class="mt-auto flex space-x-3">
+                                <a href="https://drive.google.com/file/d/1Mj64fKUfk7A6SFQgOdMNdZcGVtNzhOa8/view?usp=sharing" target="_blank" rel="noopener">
+                                <button class="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                                  <i class="fas fa-download mr-2"></i>Download
+                                </button>
+                                </a>
+                                <a href="https://github.com/muhammadsufyanzafar/EscapeRushhttps://github.com/muhammadsufyanzafar/Escape-Rush" target="_blank" rel="noopener">
+                                <button class="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>Code
+                                </button>
+                                </a>
                 </div>
             </div>
         </section>
@@ -461,24 +487,24 @@
                         <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-code text-purple-600 mr-3"></i>Technical Skills</h3>
                         <div class="space-y-5">
                             <div class="skill-item">
-                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">HTML & CSS</span><span class="text-purple-600 font-semibold">90%</span></div>
-                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="90%"></div></div>
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">HTML & CSS</span><span class="text-purple-600 font-semibold">70%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="70%"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">JavaScript</span><span class="text-purple-600 font-semibold">68%</span></div>
-                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="68%"></div></div>
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">JavaScript</span><span class="text-purple-600 font-semibold">48%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="48%"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Java</span><span class="text-purple-600 font-semibold">65%</span></div>
-                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="65%"></div></div>
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Java</span><span class="text-purple-600 font-semibold">55%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="55%"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">WordPress</span><span class="text-purple-600 font-semibold">75%</span></div>
-                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="75%"></div></div>
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">WordPress</span><span class="text-purple-600 font-semibold">70%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="70%"></div></div>
                             </div>
                             <div class="skill-item">
-                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Android Development</span><span class="text-purple-600 font-semibold">68%</span></div>
-                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="68%"></div></div>
+                                <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">Android Development</span><span class="text-purple-600 font-semibold">52%</span></div>
+                                <div class="bg-gray-200 rounded-full h-2.5"><div class="skill-bar bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full" style="width: 0%" data-width="52%"></div></div>
                             </div>
                              <div class="skill-item">
                                 <div class="flex justify-between mb-1"><span class="font-medium text-gray-700">AI Tools Integration</span><span class="text-purple-600 font-semibold">80%</span></div>
@@ -491,14 +517,14 @@
                     <div class="fade-in" style="transition-delay: 150ms;">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fas fa-users text-purple-600 mr-3"></i>Soft Skills</h3>
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-purple-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">🧠</div><h4 class="font-semibold text-gray-800">Problem Solving</h4></div>
-                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-green-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">🤝</div><h4 class="font-semibold text-gray-800">Collaboration</h4></div>
-                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">💬</div><h4 class="font-semibold text-gray-800">Communication</h4></div>
-                            <div class="text-center p-4 bg-gray-100 rounded-lg transition-all duration-300 hover:bg-pink-100 hover:shadow-md"><div class="text-4xl mb-2" aria-hidden="true">💡</div><h4 class="font-semibold text-gray-800">Creative Thinking</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:bg-purple-100 hover:shadow-xl hover:-translate-y-2 fade-in"><div class="text-4xl mb-2" aria-hidden="true">🧠</div><h4 class="font-semibold text-gray-800">Problem Solving</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:bg-green-100 hover:shadow-xl hover:-translate-y-2 fade-in"><div class="text-4xl mb-2" aria-hidden="true">🤝</div><h4 class="font-semibold text-gray-800">Collaboration</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:bg-yellow-100 hover:shadow-xl hover:-translate-y-2 fade-in"><div class="text-4xl mb-2" aria-hidden="true">💬</div><h4 class="font-semibold text-gray-800">Communication</h4></div>
+                            <div class="text-center p-4 bg-gray-100 rounded-lg shadow-md overflow-hidden transition-all duration-300bg-pink-100 hover:shadow-xl hover:-translate-y-2 fade-in""><div class="text-4xl mb-2" aria-hidden="true">💡</div><h4 class="font-semibold text-gray-800">Creative Thinking</h4></div>
                         </div>
-                         <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                         <div class="mt-6 p-4 bg-gray-50 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <h4 class="font-semibold text-gray-800 mb-3">Additional Strengths</h4>
-                            <div class="flex flex-wrap gap-2">
+                            <div class="fade-in" style="transition-delay: 150ms;">
                                 <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Leadership</span>
                                 <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Time Management</span>
                                 <span class="px-3 py-1 bg-white rounded-full text-gray-700 text-sm shadow-sm">Adaptability</span>
@@ -526,7 +552,7 @@
                 <div class="fade-in">
                     <h3 class="text-2xl font-bold text-gray-800 mb-8">Let's Connect</h3>
                     <div class="space-y-6">
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
                                 <i class="fas fa-envelope text-xl"></i>
                             </div>
@@ -535,7 +561,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
                                 <i class="fas fa-phone text-xl"></i>
                             </div>
@@ -544,7 +570,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in">
                             <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
                                 <i class="fas fa-map-marker-alt text-xl"></i>
                             </div>
@@ -565,7 +591,7 @@
                     
                     <!-- Contact Form -->
                     <div class="fade-in" style="transition-delay: 150ms;">
-                        <form id="contact-form" class="bg-white rounded-lg p-8 shadow-md" novalidate>
+                        <form id="contact-form" class="bg-white rounded-lg p-8 shadow-md shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fade-in" novalidate>
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
@@ -612,7 +638,7 @@
                     <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
                 </div>
                 <div class="border-t border-gray-700 pt-8">
-                    <p class="text-gray-400">&copy; 2025 Designed and developed with ❤️ by Muhammad Sufyan Zafar. All rights reserved.</p>
+                    <p class="text-gray-400">&copy; 2025 Designed and developed with ❤️ by Muhammad Sufyan Zafar. <br> All rights reserved.</p>
                 </div>
             </div>
         </div>
