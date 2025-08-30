@@ -54,7 +54,7 @@ Check out the live preview of the portfolio website here:
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, Tailwind CSS, JavaScript
+- **Frontend:** HTML, CSS, Tailwind CSS & JavaScript
 - **Animations & UI Enhancements:** Custom JS, Font Awesome, Scroll animations
 - **Form Handling:** EmailJS
 - **Hosting:** GitHub Pages
