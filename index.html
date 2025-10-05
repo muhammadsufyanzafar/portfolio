@@ -91,18 +91,42 @@
         }
         
         /* Animated Gradient Background */
-.gradient-bg {
-  background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5ed, #2193b0);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
+		.gradient-bg {
+  		background: linear-gradient(-45deg, #667eea, #764ba2, #6dd5ed, #2193b0);
+ 		background-size: 400% 400%;
+  		animation: gradientShift 15s ease infinite;
+		}
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+		@keyframes gradientShift {
+  		0% { background-position: 0% 50%; }
+  		50% { background-position: 100% 50%; }
+  		100% { background-position: 0% 50%; }
+		}
 
+		.floating-shape {
+		  position: absolute;
+		  border-radius: 50%;
+		  opacity: 0.2;
+		  animation: float 8s ease-in-out infinite;
+		}
+
+		.shape1 {
+ 		 width: 80px; height: 80px;
+ 		 background: #fff;
+ 		 top: 20%; left: 10%;
+		}
+
+		.shape2 {
+		  width: 120px; height: 120px;
+		  background: #ffd700;
+		  bottom: 15%; right: 15%;
+		}
+
+		@keyframes float {
+		  0%, 100% { transform: translateY(0); }
+		  50% { transform: translateY(-20px); }
+		}
+		
         .gradient-text {
             background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
             -webkit-background-clip: text;
@@ -280,6 +304,8 @@
     <main>
         <!-- Header/Hero Section -->
         <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden pt-20">
+			<div class="floating-shape shape1"></div>
+			<div class="floating-shape shape2"></div>
             <div class="absolute inset-0 bg-black/25"></div>
             <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 fade-in">Muhammad Sufyan Zafar</h1>
