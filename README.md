@@ -19,7 +19,7 @@ Welcome to my portfolio website! Here, you’ll find a showcase of my skills, pr
 
 ## 🌐 Live Site
 Check out the live preview of the portfolio website here:
-🔗 [**View Portfolio Live**](https://muhammadsufyanzafar.github.io/Portfolio)
+🔗 [**View Portfolio Live**](https://muhammadsufyanzafar.github.io/portfolio)
 
 ---
 
